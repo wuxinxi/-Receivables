@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">收款XB</string>
+    <string name="pay">支付</string>
+    <string name="query">查询交易记录</string>
+    <string name="tenpay">财付通扫码支付</string>
+    <string name="Alipay">支付宝扫码支付</string>
+
+
+    <string name="payment">收银</string>
+    <string name="manager">操作员管理</string>
+    <string name="query_chexiao">查询|撤销</string>
+    <string name="setting">设置</string>
+    <string name="canshu_setting">参数设置</string>
+    <string name="safePsw">安全密码</string>
+
+    <string name="msg_pay">正在加载,请稍后……</string>
+</resources>

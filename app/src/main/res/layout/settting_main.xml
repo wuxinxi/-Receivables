@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar"></include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/setting"
+            style="@style/w_h_warmap"
+            android:background="@drawable/setting_selecotr"
+            android:paddingTop="70dp"
+            android:text="@string/canshu_setting"
+            android:textColor="@color/whiteColor"
+            android:textSize="35dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/safeManager"
+            style="@style/w_h_warmap"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/setting"
+            android:background="@drawable/safe_manager_selecotr"
+            android:paddingTop="70dp"
+            android:text="@string/safePsw"
+            android:textColor="@color/whiteColor"
+            android:textSize="35dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</LinearLayout>

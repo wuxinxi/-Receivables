@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/whiteColor">
+
+    <include layout="@layout/toolbar"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/autoScan"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_style"
+                android:text="主扫"
+                android:textSize="26sp" />
+
+            <Button
+                android:id="@+id/passiveScan"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_style"
+                android:text="被扫"
+                android:textSize="26sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textLineShow1"
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="@color/blueColor" />
+
+            <TextView
+                android:id="@+id/textLineShow2"
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="@color/whiteColor" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1">
+
+                    <!-- 图片提示 -->
+
+                    <LinearLayout
+                        android:id="@+id/imageLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/imageShow"
+                            android:layout_width="300dp"
+                            android:background="@mipmap/bg2"
+                            android:layout_height="300dp"/>
+
+                    </LinearLayout>
+
+                    <!-- 二维码扫描 -->
+
+                    <FrameLayout
+                        android:id="@+id/surfaceViewLayout"
+                        android:layout_width="300dp"
+                        android:layout_height="300dp"
+                        android:visibility="gone">
+
+                        <com.wizarpos.barcode.scanner.ScannerRelativeLayout
+                            android:id="@+id/scanner"
+                            android:layout_width="300dp"
+                            android:layout_height="300dp" />
+                    </FrameLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="打印订单二维码，由顾客扫描进行支付"
+                    android:textSize="30sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="金  额："
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.00"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="30sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="扣  减："
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/koujian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.00"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="30sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="应  收："
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/yingshou"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.00"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="30sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="@color/bg_color2"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/out_activity"
+                android:layout_width="230dp"
+                android:layout_height="65dp"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/fanhui_selecotr"
+                android:drawableLeft="@mipmap/type_back"
+                android:paddingLeft="20dp"
+                android:text="退出收银"
+                android:textColor="@color/whiteColor"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/print"
+                android:layout_width="230dp"
+                android:layout_height="65dp"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/print_selecotr"
+                android:text="打印订单二维码"
+                android:textColor="@color/whiteColor"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/check_dingdan"
+                android:layout_width="230dp"
+                android:layout_height="65dp"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/print_selecotr"
+                android:text="检查订单"
+                android:textColor="@color/whiteColor"
+                android:textSize="30sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

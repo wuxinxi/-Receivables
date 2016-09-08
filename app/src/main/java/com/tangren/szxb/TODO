@@ -1,0 +1,22 @@
+
+
+AlipayActivity：支付Activity（支付宝、qq、微信、移动支付）
+
+CashActivity：现金支付
+
+Main：功能主界面
+
+MainActivity：
+
+PayFinishActivity：支付完成Activity
+
+PaymentActivity：支付下单界面
+
+SettingActivity:设置界面
+
+OrderActivity：账单管理
+
+AdminView:AdminActivity 视图层接口
+
+AdminActivity：验证界面
+

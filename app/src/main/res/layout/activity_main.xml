@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context="activity.com.szxb.tangren.payment.MainActivity">
+
+    <Button
+        android:id="@+id/pay"
+        style="@style/w_h_setting"
+        android:text="@string/pay"/>
+
+    <Button
+        android:id="@+id/quert"
+        style="@style/w_h_setting"
+        android:text="@string/query"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/pay"/>
+    <Button
+        android:id="@+id/alipay"
+        style="@style/w_h_setting"
+        android:text="@string/Alipay"
+        android:layout_below="@id/pay"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/tenpay"
+        style="@style/w_h_setting"
+        android:layout_below="@id/quert"
+        android:layout_marginTop="10dp"
+        android:text="@string/tenpay"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/alipay"/>
+
+</RelativeLayout>
